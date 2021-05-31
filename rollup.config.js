@@ -37,7 +37,7 @@ export default {
 		sourcemap: !production,
 		name: 'app',
 		format: "esm",
-  	dir: "docs/build"
+  	file: "docs/bundle.js"
 	},
 	plugins: [
 		svelte({
@@ -55,7 +55,7 @@ export default {
       }
 		}),
 
-		routify({}),
+		routify({dynamicImports: false}),
 
 		// we'll extract any component CSS out into
 		// a separate file - better for performance
