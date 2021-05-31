@@ -1,6 +1,15 @@
 import { setProject } from './projects'
 import type { TSave } from './types'
 
+export const defaultData: TSave = {
+  ano: '',
+  images: [],
+  materia: '',
+  nAlternativas: 4,
+  nQuestoes: 5,
+  text: '',
+}
+
 export default class Project {
   private constructor(
     public name: string,
@@ -8,7 +17,8 @@ export default class Project {
     public imagesUrls: { id: string; url: string }[]
   ) {}
 
-  public static async create(name: string, data: TSave) {
+  public static async create(name: string, data?: TSave) {
+    if(!data) data = defaultData
     const imagesUrls: { id: string; url: string }[] = await Promise.all(
       data.images.map(async ({ id, data }) => {
         const res = await fetch(data)

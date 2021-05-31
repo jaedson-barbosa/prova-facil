@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.0
- * File generated Mon May 31 2021 11:28:14 GMT-0300 (Horário Padrão de Brasília)
+ * File generated Mon May 31 2021 12:59:13 GMT-0300 (Horário Padrão de Brasília)
  */
 
 export const __version = "2.18.0"
-export const __timestamp = "2021-05-31T14:28:14.781Z"
+export const __timestamp = "2021-05-31T15:59:13.015Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -62,7 +62,10 @@ export const _tree = {
       "component": () => import('../src/pages/index.svelte').then(m => m.default)
     }
   ],
-  "path": "/"
+  "isLayout": true,
+  "path": "/",
+  "id": "__layout",
+  "component": () => import('../src/pages/_layout.svelte').then(m => m.default)
 }
 
 

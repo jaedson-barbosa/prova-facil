@@ -1,5 +1,6 @@
 <script lang="ts">
   import { url } from '@roxi/routify'
+  import { defaultData } from './_scripts/project';
   import { getProjectNames, setProject, getData } from './_scripts/projects'
   import type { TSavedProject, TSave } from './_scripts/types'
 
@@ -14,14 +15,7 @@
     } while (projects[name] || name.includes(','))
     if (name) {
       name = name.replaceAll(' ', '-')
-      addProject(name, {
-        ano: '',
-        images: [],
-        materia: name,
-        nAlternativas: 4,
-        nQuestoes: 5,
-        text: '',
-      })
+      addProject(name, defaultData)
     }
   }
 

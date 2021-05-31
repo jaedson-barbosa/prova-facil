@@ -7,7 +7,7 @@
     "dev:rollup": "rollup -c -w",
     "dev:routify": "routify",
     "build": "routify -b && rollup -c",
-    "start": "sirv docs --no-clear --single",
+    "start": "sirv docs",
     "validate": "svelte-check"
   },
   "devDependencies": {
