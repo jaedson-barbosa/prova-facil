@@ -1,11 +1,11 @@
 
 /**
  * @roxi/routify 2.18.0
- * File generated Mon May 31 2021 12:59:13 GMT-0300 (Horário Padrão de Brasília)
+ * File generated Mon May 31 2021 13:14:53 GMT-0300 (Horário Padrão de Brasília)
  */
 
 export const __version = "2.18.0"
-export const __timestamp = "2021-05-31T15:59:13.015Z"
+export const __timestamp = "2021-05-31T16:14:53.078Z"
 
 //buildRoutes
 import { buildClientTree } from "@roxi/routify/runtime/buildRoutes"
@@ -60,12 +60,15 @@ export const _tree = {
       "path": "/index",
       "id": "_index",
       "component": () => import('../src/pages/index.svelte').then(m => m.default)
+    },
+    {
+      "isPage": true,
+      "path": "/prova-facil",
+      "id": "_provaFacil",
+      "component": () => import('../src/pages/prova-facil.svelte').then(m => m.default)
     }
   ],
-  "isLayout": true,
-  "path": "/",
-  "id": "__layout",
-  "component": () => import('../src/pages/_layout.svelte').then(m => m.default)
+  "path": "/"
 }
 
 
