@@ -34,7 +34,7 @@
       </span>
       <span>Início</span>
     </a>
-    <button class="button" on:click={$project.save}>
+    <button class="button" on:click={() => $project.save()}>
       <span class="icon is-small">
         <i class="fas fa-save" />
       </span>
